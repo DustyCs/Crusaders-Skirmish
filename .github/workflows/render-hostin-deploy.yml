@@ -16,7 +16,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: ./backend
+        working-directory: ./server
         run: npm ci
 
       - name: Deploy to Render
