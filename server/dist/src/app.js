@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
-import initSocket from './socket';
+import initSocket from './socket/index.js';
 import http from 'http';
 dotenv.config();
 const app = express();

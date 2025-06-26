@@ -1,5 +1,5 @@
 import bycrypt from "bcrypt";
-import { User } from "../../models/User";
+import { User } from "../../models/User.js";
 export const registerUser = async (req, res) => {
     try {
         const { email, password, username } = req.body;
