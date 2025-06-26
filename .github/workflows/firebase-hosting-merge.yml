@@ -6,18 +6,19 @@ on:
   push:
     branches:
       - main
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Build frontend
-      - working-directory: ./crusader's skirmish
-      - run: npm ci && npm run build
+        working-directory: ./crusader's skirmish
+        run: npm ci && npm run build
 
       - name: Deploy
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CRUSADERS_SKIRMISH }}
