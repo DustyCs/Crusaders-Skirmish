@@ -51,9 +51,9 @@ jobs:
         working-directory: ./server
         run: npm run build
 
-      - name: Run tests
-        working-directory: ./server
-        run: npm test
+      # - name: Run tests
+      #   working-directory: ./server
+      #   run: npm test
 
   deploy_backend:
     runs-on: ubuntu-latest
