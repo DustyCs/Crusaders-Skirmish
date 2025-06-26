@@ -3,10 +3,16 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
+import initSocket from './socket';
+import http from 'http';
+
 
 dotenv.config();
 
 const app = express();
+
+const server = http.createServer(app);
+initSocket(server);
 
 app.use(express.json());
 app.use(helmet());
@@ -18,4 +24,5 @@ app.use(cors({
     credentials: true
 }));
 
-export default app;
+
+export { app, server };
