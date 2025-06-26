@@ -6,6 +6,8 @@ import cookieParser from 'cookie-parser';
 import initSocket from './socket/index.js';
 import http from 'http';
 
+import { MainRouter } from './routes/index.js';
+
 
 dotenv.config();
 
@@ -24,5 +26,6 @@ app.use(cors({
     credentials: true
 }));
 
+app.use('/api', MainRouter);
 
 export { app, server };

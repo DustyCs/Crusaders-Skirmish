@@ -20,7 +20,7 @@ export const registerUser = async (req: Request, res: Response) => {
             }
     
             const hashedPassword = await bycrypt.hash(password, 10);
-            const user = new User({ email, password: hashedPassword, username });
+            const user = new User({ email, passwordHash: hashedPassword, username });
             await user.save();
     
             res.status(201).json({ message: 'User registered successfully' });
