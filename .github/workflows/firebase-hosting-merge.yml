@@ -24,3 +24,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CRUSADERS_SKIRMISH }}
           channelId: live
           projectId: crusaders-skirmish
+          entryPoint: "./crusader's skirmish"
