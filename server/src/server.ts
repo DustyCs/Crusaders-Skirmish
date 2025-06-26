@@ -1,6 +1,6 @@
-import app from "./app";
-import { APP_PORT } from "./utils/sercret"
+import { app, server} from "./app.js";
+import { APP_PORT } from "./utils/sercret.js"
 
-app.listen(APP_PORT, () => {
+server.listen(APP_PORT, () => {
   console.log(`Server is running on port ${APP_PORT}`);
 });
